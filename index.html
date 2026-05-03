@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Test App</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #38bdf8;
+        }
+
+        button {
+            background: #38bdf8;
+            border: none;
+            padding: 10px 20px;
+            color: #0f172a;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0ea5e9;
+        }
+
+        .timestamp {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>🚀 CI/CD Pipeline Test</h1>
+        <p>If you see this page, deployment is working!</p>
+
+        <button onclick="showMessage()">Click Me</button>
+
+        <div class="timestamp">
+            Deployed at: <span id="time"></span>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("CI/CD is working 🎉");
+        }
+
+        // Show deployment timestamp
+        document.getElementById("time").innerText = new Date().toLocaleString();
+    </script>
+
+</body>
+</html>
