@@ -3,7 +3,7 @@ name: Deploy - Docker Image
 on:
   push:
     branches:
-      - docker
+      - null
 
 jobs:
   deploy:
